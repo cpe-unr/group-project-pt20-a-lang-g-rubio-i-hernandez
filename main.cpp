@@ -1,6 +1,10 @@
 /** @file */
-#include <iostream>
+#include "csv.h"
 
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
 /**
  * \brief   The function bar.
  *
@@ -25,7 +29,26 @@ void fn(){
 
 }
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+int main(){
+
+
+
+
+
+
+  
+  //TODO: Call a method that calls all the getters for the meta/technical data, compose into one string for each audio file
+  //TODO: Replace "eat,drink,sleep,repeat" with data strings
+  string fileInfo1 = "eat,drink,sleep,repeat";
+  string fileInfo2 = "eat,drink,sleep,repeat";
+  string fileInfo3 = "eat,drink,sleep,repeat";
+  string fileInfo4 = "eat,drink,sleep,repeat";
+
+  CSV* csv;
+  cout << "Please enter the name of the new file being created (without the .csv):" << endl;
+  string OUTPUT;
+  cin >> OUTPUT;
+  csv->outputCSV(OUTPUT,fileInfo1, fileInfo2, fileInfo3, fileInfo4);
+
+  return 0;
 }
