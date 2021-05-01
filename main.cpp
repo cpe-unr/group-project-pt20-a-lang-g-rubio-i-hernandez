@@ -1,9 +1,11 @@
 /** @file */
-#include "csv.h"
+//#include "csv.h"
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "wav_reader.h"
+
 using namespace std;
 /**
  * \brief   The function bar.
@@ -25,13 +27,16 @@ using namespace std;
  * \retval        ERR_SUCCESS    The function is successfully executed
  * \retval        ERR_FAILURE    An error occurred
  */
+/* 
 void fn(){
 
 }
+*/
 
 int main(){
-
-
+	
+	WavReader yourMom;
+	yourMom.readFile("yes-16-bit-mono.wav");
 
 
 
@@ -43,12 +48,12 @@ int main(){
   string fileInfo2 = "eat,drink,sleep,repeat";
   string fileInfo3 = "eat,drink,sleep,repeat";
   string fileInfo4 = "eat,drink,sleep,repeat";
-
+  /*
   CSV* csv;
   cout << "Please enter the name of the new file being created (without the .csv):" << endl;
   string OUTPUT;
   cin >> OUTPUT;
   csv->outputCSV(OUTPUT,fileInfo1, fileInfo2, fileInfo3, fileInfo4);
-
+	*/
   return 0;
 }
