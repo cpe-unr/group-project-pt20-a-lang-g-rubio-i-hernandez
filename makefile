@@ -18,4 +18,4 @@ mylib.a: mylib.o
 
 	
 clean:
-	rm *.o
+	rm *.o main
