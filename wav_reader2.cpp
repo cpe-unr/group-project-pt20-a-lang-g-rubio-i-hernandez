@@ -112,7 +112,7 @@ std::ostream& operator<<(std::ostream &out, const WavReader &wav){
 	std::string metaString(wav.metaBuff);
 	
 	
-	out << metaString << wav.waveHeader.bit_depth << wav.waveHeader.num_channels << std::endl;
+	out << metaString <<"," << wav.waveHeader.bit_depth << ","<< wav.waveHeader.num_channels << std::endl;
 	return out;
 }
 
