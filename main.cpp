@@ -7,6 +7,8 @@
 #include <dirent.h>
 #include <vector>
 #include "wav_reader.h"
+#include "dir_reader.h"
+#include "fileWriter.h"
 
 using namespace std;
 /**
@@ -37,64 +39,13 @@ void fn(){
 
 int main(){
 	
-	std::vector<std::string> fileList;
-	std::ofstream outFile;
-	std::string userFileName;
-	bool same = true;
-
-	struct dirent *directory;
-	DIR *wav_dr;
-	wav_dr = opendir("./wav_folder");
-
-	if(wav_dr!=NULL)
-	{
-    	for(directory=readdir(wav_dr); directory!=NULL; directory=readdir(wav_dr))
-    	{
-      		fileList.push_back(directory->d_name); // contains fileNames (maybe not necessary)
-    	}
-    	closedir(wav_dr);
-
-    	//mainly for testing; outputs names of files read in
-	    for (int i = 0; i < fileList.size(); i++)
-	    {  
-	      std::cout << fileList.at(i) << std::endl; // first two entries are junk, start at i = 2
-	    } // random file ".DS_Store" is being created
-
-
-  	}
-  	else
-	    std::cout<<"\nEncountered an error";
-
-
-
+	DirReader dirReader("./wav_folder");
 
 	// files processed by this point
-	do
-	{
-		std::cout << "Enter the name you want the new file to be called.\nName: ";
-		std::cin >> userFileName;
 
-		for (int n = 2; n < fileList.size(); n++)
-		{
-			if (fileList.at(n).compare(userFileName) == 0)
-			{
-				std::cout << "Files cannot be saved with the same name as an extisting file." << std::endl;
-				same = true;
-				n = fileList.size();
-			}
-			else
-				same = false;
-		}
-	} while (same == true);
+	FileWriter fWriter(dirReader.getFileList());
 
-	outFile.open("./Output_Folder/"+userFileName);
 
-	for (int n = 2; n < fileList.size(); n++)
-	{
-		outFile << fileList.at(n) << std::endl;
-	}
-
-	outFile.close();
 
 	WavReader yourMom;
 	yourMom.readFile("yes-16-bit-mono.wav");
