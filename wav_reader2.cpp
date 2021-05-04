@@ -6,6 +6,7 @@
 #include "wav_reader.h"
 #include "WaveHeadMod.h"
 #include "chunkHeader.h"
+#include "dataBytes.h"
 
 
 
@@ -14,12 +15,10 @@
 
 
 
-typedef struct dataBytes{
-	int chunkBytes;
-};
-dataBytes byteSizeHolder;
+
 
 void WavReader::readFile(const std::string &fileName){
+	dataBytes byteSizeHolder;
 	originalFileName = fileName;
 	char chunkLabel[4];	
 	int genLblSize = (sizeof(char) * 4);
