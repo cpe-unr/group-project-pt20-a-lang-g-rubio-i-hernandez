@@ -17,6 +17,8 @@ class WavReader{
 		int getMetaSize() const;
 		short getBitSize() const;
 		short getStereo() const;
+		std::string getOriginalName();
+		friend std::ostream& operator<<(std::ostream &out, const WavReader &wav);
 
 	private:
 		wav_header waveHeader;
@@ -24,6 +26,7 @@ class WavReader{
 		char* metaBuff = NULL;
 		int dataIndex, metaIndex;
 		generic_chunk metaChunk{"LIST"}, dataChunk{"data"};
+		std::string originalFileName;
 };
 
 

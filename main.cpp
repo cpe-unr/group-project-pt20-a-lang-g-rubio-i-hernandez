@@ -9,6 +9,7 @@
 #include "wav_reader.h"
 #include "dir_reader.h"
 #include "fileWriter.h"
+#include "cvs.h"
 
 using namespace std;
 /**

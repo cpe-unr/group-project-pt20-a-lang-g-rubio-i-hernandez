@@ -1,9 +1,3 @@
-//
-// Gustavo Rubio
-// Programming Assignment 3
-// 3/23/2021
-/**************************/
-
 #ifndef ECHO_H
 #define ECHO_H
 
@@ -12,19 +6,45 @@
 #include <cmath>
 using namespace std;
 
-class Echo : public Processor {
+template<class T>
+class Echo : public Processor<T> {
 public:
-	int delay;
-    void processBuffer(unsigned char* buffer, int bufferSize) override;
+    int delay;
+    /**
+    *Adds previous, quieter portions of the buffer unto itself
+    *@param 
+    */
+  void processBuffer(T* buffer, int bufferSize)override{
+    int count;
+      for(count = delay; count <= bufferSize; count++){
+        buffer[count] = (buffer[count] + buffer[count - delay]) / 2;
+      }
+      
+  }
 
-	Echo();
-	Echo(int newDelay);
-
-	virtual ~Echo();
-
-	void setDelay(int delay);
+  Echo(){
+    
+  }
+  /**
+    *parameterized ctor
+    */
+  Echo(int newDelay){
+    Echo::setDelay(newDelay);
+  }
+/**
+ *Echo deconstructor
+*/
+  ~Echo(){}
+/**
+*Set what the audio delay will be
+*/
+  void setDelay(int newDelay){
+    delay = newDelay;
+  } 
+  
 };
 
 
 
 #endif
+

@@ -6,6 +6,7 @@
 #include "wav_reader.h"
 #include "WaveHeadMod.h"
 #include "chunkHeader.h"
+#include "dataBytes.h"
 
 
 
@@ -14,12 +15,11 @@
 
 
 
-typedef struct dataBytes{
-	int chunkBytes;
-};
-dataBytes byteSizeHolder;
+
 
 void WavReader::readFile(const std::string &fileName){
+	dataBytes byteSizeHolder;
+	originalFileName = fileName;
 	char chunkLabel[4];	
 	int genLblSize = (sizeof(char) * 4);
 	int intSize = sizeof(int);
@@ -34,11 +34,16 @@ void WavReader::readFile(const std::string &fileName){
 			
 			if (chunkString == "LIST"){
 				
+				
 				file.read((char*)&byteSizeHolder, sizeof(int)); //Size of the chunk
 				metaBuff = new char[byteSizeHolder.chunkBytes];
 				metaIndex = byteSizeHolder.chunkBytes;
 				file.read((char*)metaBuff, byteSizeHolder.chunkBytes);
 				std::string inf(metaBuff);
+				
+			
+				
+				
 			}else if (chunkString == "data"){
 				
 				file.read((char*)&byteSizeHolder, sizeof(int)); //Size of the chunk
@@ -96,5 +101,19 @@ short WavReader::getStereo() const{
 	return waveHeader.num_channels;
 }
 
+std::string WavReader::getOriginalName(){
+	return originalFileName;
+}
+
+
+
+
+std::ostream& operator<<(std::ostream &out, const WavReader &wav){
+	std::string metaString(wav.metaBuff);
+	
+	
+	out << metaString << wav.waveHeader.bit_depth << wav.waveHeader.num_channels << std::endl;
+	return out;
+}
 
 

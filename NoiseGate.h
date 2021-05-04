@@ -1,9 +1,3 @@
-//
-// Gustavo Rubio
-// Programming Assignment 3
-// 3/23/2021
-/**************************/
-
 #ifndef NOISEGATE_H
 #define NOISEGATE_H
 
@@ -11,13 +5,26 @@
 #include <cstdint>
 #include <cmath>
 
-class NoiseGate : public Processor {
+template<class T>
+class NoiseGate : public Processor<T> {
 public:
-	int count = 0;
-    void processBuffer(unsigned char* buffer, int bufferSize) override;
-	NoiseGate();
-	virtual ~NoiseGate();
-};
+/**
+*Sets the audio equal to 'zero' (silence) if it's not loud enough
+*/
+	void processBuffer(T* buffer, int bufferSize)override{
+    const T ZERO = (pow(2, bitType)/2);
+    const T threshold = ZERO + (ZERO * .05)
+    for(int i = 0; i < bufferSize; i++) {
+      if(buffer[i] > (ZERO - threshold) && buffer[i] < (ZERO + threshold)) {
+        buffer[i] = ZERO;
+        }
 
+      }
+    }
+
+  }
+  NoiseGate(){}
+  ~NoiseGate(){}
+};
 
 #endif  
