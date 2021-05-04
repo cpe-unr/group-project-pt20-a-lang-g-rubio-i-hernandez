@@ -1,5 +1,2 @@
-//
-// Created by Keith Lancaster on 3/13/21.
-//
-
+//Group Final Project
 #include "Processor.h"

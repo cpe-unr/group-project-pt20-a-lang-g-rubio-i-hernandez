@@ -7,6 +7,7 @@
 #include <dirent.h>
 #include <vector>
 #include "wav_reader.h"
+#include "cvs.h"
 
 using namespace std;
 /**
