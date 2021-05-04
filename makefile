@@ -5,4 +5,4 @@ wav_reader.o: wav_reader2.cpp wav_reader.h
 	g++ -std=c++11 wav_reader2.cpp -c
 	
 clean:
-	rm *.o
+	rm *.o main
