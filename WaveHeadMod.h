@@ -18,7 +18,10 @@
 37-40	“data”	“data” chunk header. Marks the beginning of the data section.
 41-44	File size (data)	Size of the data section.
  */
-
+/**
+ * A modified version of the WAV header from PA3 that **only** includes the "RIFF" and "fmt " chunk
+ */
+  
 typedef struct wav_header {
     // RIFF Header
 	char riff_header[4]; // Contains "RIFF"
