@@ -12,7 +12,8 @@ public:
     int delay;
     /**
     *Adds previous, quieter portions of the buffer unto itself
-    *@param 
+    *@param buffer - the actual audio
+    *@param bufferSize - the length of this audio
     */
   void processBuffer(T* buffer, int bufferSize)override{
     int count;
@@ -27,6 +28,7 @@ public:
   }
   /**
     *parameterized ctor
+    *@param newDelay - how long the delay in the echo will be
     */
   Echo(int newDelay){
     Echo::setDelay(newDelay);
@@ -37,6 +39,7 @@ public:
   ~Echo(){}
 /**
 *Set what the audio delay will be
+*@param newDelay - the new delay is being set
 */
   void setDelay(int newDelay){
     delay = newDelay;
