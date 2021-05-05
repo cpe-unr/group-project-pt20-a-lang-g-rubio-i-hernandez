@@ -1,6 +1,10 @@
 main: main.cpp wav_reader2.o
 	g++ -std=c++11 main.cpp wav_reader2.cpp -o main
 	
+fileWriter.o: fileWriter.cpp fileWriter.h
+	g++ -std=c++11 fileWriter.cpp -c
+dir_reader.o: dir_reader.cpp dir_reader.h
+	g++ -std=c++11 dir_reader.cpp -c
 wav_reader.o: wav_reader2.cpp wav_reader.h
 	g++ -std=c++11 wav_reader2.cpp -c
 NoiseGate.o: NoiseGate.cpp NoiseGate.h
