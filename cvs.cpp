@@ -8,6 +8,11 @@ using namespace std;
 /** 
   *Create an output filestream object using an inputted file name string
   *Send in the recieved metadata into the CSV file
+  *@param OUTPUT - the name of the output file
+  *@param fileInfo1 - the data of the first output file
+  *@param fileInfo2 - the data of the second output file
+  *@param fileInfo3 - the data of the third file
+  *@param fileInfo4 - the data of the fourth file
   */
 void CSV::outputCSV(string OUTPUT,string fileInfo1,string fileInfo2,string fileInfo3,string fileInfo4){
   
