@@ -11,7 +11,11 @@ class FileWriter
 	std::ofstream outFile;
 
 public:
-	FileWriter(std::vector<std::string>);
+	/**
+	 *  Constructor for FileWriter class
+	 *  @param fileListInput - contains the names of files
+	 */
+	FileWriter(std::vector<std::string> fileListInput);
 
 	/**
 	 *  gets the file name the user wants to save the processed .wav under
@@ -21,9 +25,9 @@ public:
 
 	/**
 	 *  sets the name to save the new .wav file as
-	 *  @param name inputted by the user for the .wav file
+	 *  @param newFName - name inputted by the user for the .wav file
 	 */
-	void setFileName(std::string);
+	void setFileName(std::string newFName);
 
 	/**
 	 *  writes contents in fileList to a file

@@ -25,6 +25,8 @@ std::string fileWriter::getFileName()
 				same = false;
 		}
 	} while (same == true);
+
+	return fileName;
 }
 
 void fileWriter::setFileName(std::string newFName)

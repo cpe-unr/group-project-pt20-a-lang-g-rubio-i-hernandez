@@ -10,6 +10,11 @@ class DirReader
 	std::vector<std::string> fileList;
 	std::string dirLocation;
 public:
+
+	/**
+	 *  Consructor for DirReader class
+	 *  @param directory - give the name of the directory to scan
+	 */	
 	DirReader(std::string);
 
 	/**
@@ -19,7 +24,7 @@ public:
 
 	/**
 	 *  returns the list of all the file names
-	 *  @return vector containing the strings of file names
+	 *  @return fileList - vector containing the strings of file names
 	 */
 	std::vector<std::string> getFileList();
 
