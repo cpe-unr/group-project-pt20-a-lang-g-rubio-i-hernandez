@@ -10,6 +10,8 @@ class Normal : public Processor<T> {
   public:
     /**
     *Takes in the buffer and magnifies the volume
+    *@param buffer - the actual audio
+    *@param bufferSize - the length of this audio
     */
     void processBuffer(T* buffer, int bufferSize)override{
       int count = 0;
