@@ -1,0 +1,43 @@
+\hypertarget{class_processor}{}\doxysection{Processor$<$ T $>$ Class Template Reference}
+\label{class_processor}\index{Processor$<$ T $>$@{Processor$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Processor.\+h$>$}
+
+Inheritance diagram for Processor$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d33/class_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_processor_a171bcf619cd05fd9aa0e22ee5dd80885}{process\+Buffer}} (T $\ast$buffer, int buffer\+Size)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_processor_a171bcf619cd05fd9aa0e22ee5dd80885}\label{class_processor_a171bcf619cd05fd9aa0e22ee5dd80885}} 
+\index{Processor$<$ T $>$@{Processor$<$ T $>$}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!Processor$<$ T $>$@{Processor$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual void \mbox{\hyperlink{class_processor}{Processor}}$<$ T $>$\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Edits the audio somehow; inplemented in subclasses 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ the actual audio \\
+\hline
+{\em buffer\+Size} & -\/ the length of this audio \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_normal_a2c568abbcf03c865b147543f0ec3b91d}{Normal$<$ T $>$}}, \mbox{\hyperlink{class_noise_gate_a7832ea2837e92a1a2f38a1f5bc922963}{Noise\+Gate$<$ T $>$}}, and \mbox{\hyperlink{class_echo_af5ea3baaa51600cf111f21f931895b46}{Echo$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_processor_8h}{Processor.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{_normal_8h}{}\doxysection{Normal.\+h File Reference}
+\label{_normal_8h}\index{Normal.h@{Normal.h}}
+{\ttfamily \#include \char`\"{}Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_normal}{Normal$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{class_normal}{Normal}} \mbox{\hyperlink{class_processor}{Processor}} \mbox{\hyperlink{_normal_8h_a3d69bb5a9135bc8bf3228ab6c983a7ab}{Normal}} ()
+\item 
+void \mbox{\hyperlink{_normal_8h_a7ebc4ec0308f28ec921cd2e6ed947a15}{process\+Buffer}} (T $\ast$buffer, int buffer\+Size) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_normal_8h_a3d69bb5a9135bc8bf3228ab6c983a7ab}\label{_normal_8h_a3d69bb5a9135bc8bf3228ab6c983a7ab}} 
+\index{Normal.h@{Normal.h}!Normal@{Normal}}
+\index{Normal@{Normal}!Normal.h@{Normal.h}}
+\doxysubsubsection{\texorpdfstring{Normal()}{Normal()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_normal}{Normal}} \mbox{\hyperlink{class_processor}{Processor}} \mbox{\hyperlink{class_normal}{Normal}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_normal_8h_a7ebc4ec0308f28ec921cd2e6ed947a15}\label{_normal_8h_a7ebc4ec0308f28ec921cd2e6ed947a15}} 
+\index{Normal.h@{Normal.h}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!Normal.h@{Normal.h}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Normal\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Takes in the buffer and magnifies the volume 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ the actual audio \\
+\hline
+{\em buffer\+Size} & -\/ the length of this audio \\
+\hline
+\end{DoxyParams}

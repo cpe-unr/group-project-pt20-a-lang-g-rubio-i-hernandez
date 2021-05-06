@@ -1,0 +1,107 @@
+\hypertarget{class_echo}{}\doxysection{Echo$<$ T $>$ Class Template Reference}
+\label{class_echo}\index{Echo$<$ T $>$@{Echo$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Echo.\+h$>$}
+
+Inheritance diagram for Echo$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_echo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_echo_af5ea3baaa51600cf111f21f931895b46}{process\+Buffer}} (T $\ast$buffer, int buffer\+Size) override
+\item 
+\mbox{\hyperlink{class_echo_a1b31c6ae8a1e01b05c6fb353ef5111f2}{Echo}} ()
+\item 
+\mbox{\hyperlink{class_echo_a3a6b0ba7009248f3db1848be97a725fc}{Echo}} (int new\+Delay)
+\item 
+\mbox{\hyperlink{class_echo_a4b52eae0885b396f8a44f1e0e36a11e5}{$\sim$\+Echo}} ()
+\item 
+void \mbox{\hyperlink{class_echo_a16f2b3d76a76f2c1c4def65ce0ba1c3c}{set\+Delay}} (int new\+Delay)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_echo_a2ca9d61ad7d321142d06d89bbfc3d2fa}{delay}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_echo_a1b31c6ae8a1e01b05c6fb353ef5111f2}\label{class_echo_a1b31c6ae8a1e01b05c6fb353ef5111f2}} 
+\index{Echo$<$ T $>$@{Echo$<$ T $>$}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo$<$ T $>$@{Echo$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_echo}{Echo}}$<$ T $>$\+::\mbox{\hyperlink{class_echo}{Echo}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_echo_a3a6b0ba7009248f3db1848be97a725fc}\label{class_echo_a3a6b0ba7009248f3db1848be97a725fc}} 
+\index{Echo$<$ T $>$@{Echo$<$ T $>$}!Echo@{Echo}}
+\index{Echo@{Echo}!Echo$<$ T $>$@{Echo$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Echo()}{Echo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_echo}{Echo}}$<$ T $>$\+::\mbox{\hyperlink{class_echo}{Echo}} (\begin{DoxyParamCaption}\item[{int}]{new\+Delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+parameterized ctor 
+\begin{DoxyParams}{Parameters}
+{\em new\+Delay} & -\/ how long the delay in the echo will be \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_echo_a4b52eae0885b396f8a44f1e0e36a11e5}\label{class_echo_a4b52eae0885b396f8a44f1e0e36a11e5}} 
+\index{Echo$<$ T $>$@{Echo$<$ T $>$}!````~Echo@{$\sim$Echo}}
+\index{````~Echo@{$\sim$Echo}!Echo$<$ T $>$@{Echo$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Echo()}{~Echo()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_echo}{Echo}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_echo}{Echo}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_echo}{Echo}} deconstructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_echo_af5ea3baaa51600cf111f21f931895b46}\label{class_echo_af5ea3baaa51600cf111f21f931895b46}} 
+\index{Echo$<$ T $>$@{Echo$<$ T $>$}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!Echo$<$ T $>$@{Echo$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_echo}{Echo}}$<$ T $>$\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Adds previous, quieter portions of the buffer unto itself 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ the actual audio \\
+\hline
+{\em buffer\+Size} & -\/ the length of this audio \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_processor_a171bcf619cd05fd9aa0e22ee5dd80885}{Processor$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_echo_a16f2b3d76a76f2c1c4def65ce0ba1c3c}\label{class_echo_a16f2b3d76a76f2c1c4def65ce0ba1c3c}} 
+\index{Echo$<$ T $>$@{Echo$<$ T $>$}!setDelay@{setDelay}}
+\index{setDelay@{setDelay}!Echo$<$ T $>$@{Echo$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setDelay()}{setDelay()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_echo}{Echo}}$<$ T $>$\+::set\+Delay (\begin{DoxyParamCaption}\item[{int}]{new\+Delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set what the audio delay will be 
+\begin{DoxyParams}{Parameters}
+{\em new\+Delay} & -\/ the new delay is being set \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_echo_a2ca9d61ad7d321142d06d89bbfc3d2fa}\label{class_echo_a2ca9d61ad7d321142d06d89bbfc3d2fa}} 
+\index{Echo$<$ T $>$@{Echo$<$ T $>$}!delay@{delay}}
+\index{delay@{delay}!Echo$<$ T $>$@{Echo$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_echo}{Echo}}$<$ T $>$\+::delay}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_echo_8h}{Echo.\+h}}\end{DoxyCompactItemize}

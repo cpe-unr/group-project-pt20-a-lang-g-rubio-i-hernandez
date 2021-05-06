@@ -1,0 +1,48 @@
+\hypertarget{_noise_gate_8h}{}\doxysection{Noise\+Gate.\+h File Reference}
+\label{_noise_gate_8h}\index{NoiseGate.h@{NoiseGate.h}}
+{\ttfamily \#include \char`\"{}Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_noise_gate}{Noise\+Gate$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} \mbox{\hyperlink{class_processor}{Processor}} \mbox{\hyperlink{_noise_gate_8h_a8a8a2bc88f794217fcb99256238e76a6}{Noise\+Gate}} ()
+\item 
+void \mbox{\hyperlink{_noise_gate_8h_aba26a096f32e1c30d70f8ffeddcbb9d9}{process\+Buffer}} (T $\ast$buffer, int buffer\+Size) override
+\item 
+\mbox{\hyperlink{_noise_gate_8h_a5fe724b75ac38fd9a958b182cc019298}{$\sim$\+Noise\+Gate}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_noise_gate_8h_a8a8a2bc88f794217fcb99256238e76a6}\label{_noise_gate_8h_a8a8a2bc88f794217fcb99256238e76a6}} 
+\index{NoiseGate.h@{NoiseGate.h}!NoiseGate@{NoiseGate}}
+\index{NoiseGate@{NoiseGate}!NoiseGate.h@{NoiseGate.h}}
+\doxysubsubsection{\texorpdfstring{NoiseGate()}{NoiseGate()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} \mbox{\hyperlink{class_processor}{Processor}} \mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_noise_gate_8h_aba26a096f32e1c30d70f8ffeddcbb9d9}\label{_noise_gate_8h_aba26a096f32e1c30d70f8ffeddcbb9d9}} 
+\index{NoiseGate.h@{NoiseGate.h}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!NoiseGate.h@{NoiseGate.h}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Sets the audio equal to \textquotesingle{}zero\textquotesingle{} (silence) if it\textquotesingle{}s not loud enough 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ the actual audio \\
+\hline
+{\em buffer\+Size} & -\/ the length of this audio \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_noise_gate_8h_a5fe724b75ac38fd9a958b182cc019298}\label{_noise_gate_8h_a5fe724b75ac38fd9a958b182cc019298}} 
+\index{NoiseGate.h@{NoiseGate.h}!````~NoiseGate@{$\sim$NoiseGate}}
+\index{````~NoiseGate@{$\sim$NoiseGate}!NoiseGate.h@{NoiseGate.h}}
+\doxysubsubsection{\texorpdfstring{$\sim$NoiseGate()}{~NoiseGate()}}
+{\footnotesize\ttfamily $\sim$\mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,43 @@
+\hypertarget{class_noise_gate}{}\doxysection{Noise\+Gate$<$ T $>$ Class Template Reference}
+\label{class_noise_gate}\index{NoiseGate$<$ T $>$@{NoiseGate$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Noise\+Gate.\+h$>$}
+
+Inheritance diagram for Noise\+Gate$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d07/class_noise_gate}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_noise_gate_a7832ea2837e92a1a2f38a1f5bc922963}{process\+Buffer}} (T $\ast$buffer, int buffer\+Size) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_noise_gate_a7832ea2837e92a1a2f38a1f5bc922963}\label{class_noise_gate_a7832ea2837e92a1a2f38a1f5bc922963}} 
+\index{NoiseGate$<$ T $>$@{NoiseGate$<$ T $>$}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!NoiseGate$<$ T $>$@{NoiseGate$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_noise_gate}{Noise\+Gate}}$<$ T $>$\+::process\+Buffer (\begin{DoxyParamCaption}\item[{T $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the audio equal to \textquotesingle{}zero\textquotesingle{} (silence) if it\textquotesingle{}s not loud enough 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ the actual audio \\
+\hline
+{\em buffer\+Size} & -\/ the length of this audio \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_processor_a171bcf619cd05fd9aa0e22ee5dd80885}{Processor$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_noise_gate_8h}{Noise\+Gate.\+h}}\end{DoxyCompactItemize}
